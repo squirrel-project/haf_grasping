@@ -183,8 +183,8 @@ public:
 		this->vis_pub = nh_.advertise<visualization_msgs::Marker>( "visualization_marker", 1 );					//Marker
 		this->vis_pub_ma = nh_.advertise<visualization_msgs::MarkerArray>( "visualization_marker_array", 1 );	//MarkerArray
 		this->vis_pub_ma_params = nh_.advertise<visualization_msgs::MarkerArray>( "visualization_marker_array_grasp_params", 1 );	//MarkerArray for grasp params
-		this->pubInputPCROS = nh_.advertise<sensor_msgs::PointCloud2>( "/haf_grasping/calc_gp_as_inputpcROS", 1);
-		this->pubTransformedPCROS = nh_.advertise<sensor_msgs::PointCloud2>( "/haf_grasping/transformed_point_cloud",1);
+		this->pubInputPCROS = nh_.advertise<sensor_msgs::PointCloud2>( "/haf_grasping/calc_gp_as_inputpcROS", 1, true);
+		this->pubTransformedPCROS = nh_.advertise<sensor_msgs::PointCloud2>( "/haf_grasping/transformed_point_cloud",1, true);
 		this->graspsearchcenter.x = 0;	//default value
 		this->graspsearchcenter.y = 0;	//default value
 		this->graspsearchcenter.z = 0;	//default value
