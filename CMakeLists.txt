@@ -62,6 +62,7 @@ find_package(OpenCV REQUIRED)
 add_message_files(
    FILES
    GraspInput.msg
+   GraspOutput.msg
 )
 
 ## Generate services in the 'srv' folder
@@ -125,7 +126,7 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 # include_directories(include)
-include_directories(include /usr/include/pcl-1.7/pcl/
+include_directories(include
   ${catkin_INCLUDE_DIRS}
 )
 
